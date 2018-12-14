@@ -1,0 +1,11 @@
+div.ProductCard {
+    padding: 32px 16px 0;
+    height: 95vh;
+    float: left;
+    width: 70vw;
+    text-align: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    box-sizing: border-box; 
+}
