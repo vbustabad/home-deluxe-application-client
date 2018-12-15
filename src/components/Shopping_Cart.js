@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const ShoppingCart = (props) => ( 
 
@@ -7,12 +9,23 @@ const ShoppingCart = (props) => (
 
       <h3>Please see the current items that have been added to your shopping cart:</h3>
 
+      {this.props.shoppingCart.map((product, index) => (
+        <div key={product.id}>
+          <p>{product.name}</p>
+          <p>Price: ${product.price}</p>
+          <img className="ProductImage" src={product.image_url} alt={product.name} /><br /><br />
+        </div>
+      ))}
 
-      <button onClick={this.props.handleClick}>Confirm Order</button>
+      <button><Link to='/order'>Confirm Order</Link></button>
     </div>
   );
 
-// Code functionality to be able to transfer product information to order.
+const mapStateToProps = (state) => ({
+  shoppingCart: state.shoppingCart.cart
+});
+    
+export default connect(mapStateToProps, null)(ShoppingCart);
   
-export default ShoppingCart;
+//export default ShoppingCart;
   
