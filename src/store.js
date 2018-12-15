@@ -2,10 +2,12 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
 import productsReducer from './reducers/productsReducer';
 import productFormData from './reducers/productFormData';
+import shoppingCartReducer from './reducers/shoppingCartReducer';
 
 const rootReducer = combineReducers({
     products: productsReducer, 
-    productFormData
+    productFormData, 
+    shoppingCart: shoppingCartReducer
 });
 
 const store = createStore(

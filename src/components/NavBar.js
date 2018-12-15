@@ -8,6 +8,7 @@ const NavBar = () =>
     <NavLink to="/login" exact style={link} activeStyle={{background: 'darkblue'}}>Login</NavLink>
     <NavLink to="/products" exact style={link} activeStyle={{background: 'darkblue'}}>Products</NavLink>
     <NavLink to="/signup" exact style={link} activeStyle={{background: 'darkblue'}}>Signup</NavLink>
+    <NavLink to="/order" exact style={link} activeStyle={{background: 'darkblue'}}>Order</NavLink>
   </div>
 
 const link = {

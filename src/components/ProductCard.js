@@ -1,36 +1,6 @@
-import React, { Component } from 'react';
-import ShoppingCart from './Shopping_Cart';
-import { fetchCurrentProduct } from '../actions/products';
-import { connect } from 'react-redux';
+import React from 'react';
 
-class ProductCard extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isButtonClicked: false
-    };
-
-    this.handleClick = this.handleClick.bind(this) 
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-    this.setState({
-      isButtonClicked: true
-    });
-    const id = e.target.id;
-    this.props.fetchCurrentProduct(id)
-  }
-
-  render() {
-    const isButtonClicked = this.state.isButtonClicked;
-
-    if (isButtonClicked === true) {
-      return <ShoppingCart product={this.props.product} />;
-    } else {
-      return <p>Information is loading.</p>;
-    }
+const ProductCard = (props) => {
 
     return (
       <div key={props.product.id} className="ProductCard">
@@ -39,27 +9,8 @@ class ProductCard extends Component {
         <p>Price: ${props.product.price}</p>
         <img className="ProductImage" src={props.product.image_url} alt={props.product.name} /><br /><br />
         
-        <button onClick={this.handleClick} id={props.product.id}>Add to Shopping Cart</button>
+        <button onClick={() => props.addProductToShoppingCart(props.product)} id={props.product.id}>Add to Shopping Cart</button>
       </div>
-  )};
-}
+)};
 
-export default connect(null, { fetchCurrentProduct })(ProductCard);
-
-
-
-
-
-
-
-//(e) => this.props.handleClick(e)
-
-//if (button is clicked) {
-  //<ShoppingCart handleClick={this.props.handleClick} />
-//} else {
-  //<p>Information is loading.</p>
-//}
-//</div>
-  
-// Code functionality to be able to add product to shopping cart.
-// Connect this to the store?
+export default ProductCard;
