@@ -20,6 +20,10 @@ class Products extends Component {
     console.log("products", this.props.products)
     return (
       <div className="Products">
+        <br />
+        <p>To view your shopping cart, please click here:</p>
+        <Link to='/shopping-cart'><button>View Shopping Cart</button></Link>
+
         <h2>Products</h2>
         {this.props.products.map((product, index) => <ProductCard key={index} product={product} addProductToShoppingCart={this.addProductToShoppingCart}/>)}
       </div>
