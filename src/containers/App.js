@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Route, withRouter, Switch } from "react-router-dom";
+import { Route, withRouter, Switch } from 'react-router-dom';
 import Products from './Products';
 import Home from '../components/Home';
 import ProductForm from './ProductForm';
@@ -8,10 +8,10 @@ import NavBar from '../components/NavBar';
 import Login from '../components/Login';
 import Signup from '../components/Signup';
 import About from '../components/About';
-import ProductCard from '../components/ProductCard';
 import Profile from '../components/Profile';
 import ShoppingCart from '../components/Shopping_Cart';
 import Order from '../components/Order';
+import IndividualProductContainer from '../containers/IndividualProductContainer';
 
 class App extends Component {
 
