@@ -1,16 +1,16 @@
 import React from 'react';
 
-const ProductCard = (props) => {
+const ProductCard = (props) => (
 
-    return (
-      <div key={props.product.id} className="ProductCard">
-        <h4>Product</h4>
-        <p>{props.product.name}</p>
-        <p>Price: ${props.product.price}</p>
-        <img className="ProductImage" src={props.product.image_url} alt={props.product.name} /><br /><br />
-        
-        <button onClick={() => props.addProductToShoppingCart(props.product)} id={props.product.id}>Add to Shopping Cart</button>
-      </div>
-)};
+    <div key={props.product.id} className="ProductCard">
+      <h4>Product</h4>
+      <p>{props.product.name}</p>
+      <p>Price: ${props.product.price}</p>
+      <img className="ProductImage" src={props.product.image_url} alt={props.product.name} /><br /><br />
+          
+      <button onClick={() => props.addProductToShoppingCart(props.product)}>Add to Shopping Cart</button>
+    </div>
+);
 
 export default ProductCard;
+
