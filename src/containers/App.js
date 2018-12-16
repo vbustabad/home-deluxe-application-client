@@ -9,7 +9,7 @@ import Login from '../components/Login';
 import Signup from '../components/Signup';
 import About from '../components/About';
 import Profile from '../components/Profile';
-import ShoppingCart from '../components/Shopping_Cart';
+import ShoppingCart from '../components/ShoppingCart';
 import Order from '../components/Order';
 import IndividualProductContainer from '../containers/IndividualProductContainer';
 
