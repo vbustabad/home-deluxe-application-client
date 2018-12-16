@@ -1,4 +1,5 @@
 import React from 'react';
+import HomePhoto from '../assets/HomePhoto.jpeg';
 
 const Home = () => (
     <div className="Home">
@@ -6,7 +7,7 @@ const Home = () => (
 
       <p>Welcome to the Home Deluxe Application! Register as a new user in order to browse for the best deals on home products.</p>
 
-      <img className="HomeImage" src="https://unsplash.com/photos/qRfMB-IOQjE" alt="" /><br /><br />
+      <img src={HomePhoto} alt="By Dane Deaner on Unsplash" /><br /><br />
     </div>
   );
   
