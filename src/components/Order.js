@@ -11,7 +11,16 @@ const Order = (props) => (
 
       <p>Order Summary:</p>
 
-      <p>{props.shoppingCart[0].price}</p>
+       {props.shoppingCart.map((product, index) => (
+        <div key={product.id}>
+          <p>{product.name}</p>
+          <p>Price: ${product.price}</p>
+          <img className="ProductImage" src={product.image_url} alt={product.name} />
+          <p>Category: {product.category}</p>
+          <br /><br />
+          <p>Thank you for choosing Home-Deluxe Application! We hope to see you again soon.</p>
+        </div>
+      ))}
     </div>
   );
 
