@@ -1,5 +1,4 @@
 import { resetProductForm } from './productForm';
-//import fetch from 'cross-fetch';
 
 const setProducts = products => {
     return {
@@ -49,7 +48,6 @@ export const createProduct = product => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           }, 
-          //body: JSON.stringify(product)
           body: JSON.stringify({product: product})
         })
           .then(response => response.json())
