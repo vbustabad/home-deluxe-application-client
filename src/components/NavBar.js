@@ -3,19 +3,18 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () =>
   <div>
-    <NavLink to="/" exact style={link} activeStyle={{background: 'darkblue'}}>Home</NavLink>
-    <NavLink to="/about" exact style={link} activeStyle={{background: 'darkblue'}}>About</NavLink>
-    <NavLink to="/login" exact style={link} activeStyle={{background: 'darkblue'}}>Login</NavLink>
-    <NavLink to="/products" exact style={link} activeStyle={{background: 'darkblue'}}>Products</NavLink>
-    <NavLink to="/signup" exact style={link} activeStyle={{background: 'darkblue'}}>Signup</NavLink>
-    <NavLink to="/order" exact style={link} activeStyle={{background: 'darkblue'}}>Order</NavLink>
+    <NavLink to="/" exact style={link} activeStyle={{background: 'lightblue'}}>Home</NavLink>
+    <NavLink to="/about" exact style={link} activeStyle={{background: 'lightblue'}}>About</NavLink>
+    <NavLink to="/login" exact style={link} activeStyle={{background: 'lightblue'}}>Login</NavLink>
+    <NavLink to="/products" exact style={link} activeStyle={{background: 'lightblue'}}>Products</NavLink>
+    <NavLink to="/signup" exact style={link} activeStyle={{background: 'lightblue'}}>Signup</NavLink>
   </div>
 
 const link = {
   width: '100px',
   padding: '12px',
     margin: '0 6px 6px',
-    background: 'blue',
+    background: 'lightblue',
     textDecoration: 'none',
     color: 'white',
 }
