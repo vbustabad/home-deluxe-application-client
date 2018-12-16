@@ -8,6 +8,13 @@ const setProducts = products => {
     };
 };
 
+const setIndividualProduct = product => {
+    return {
+        type: 'GET_INDIVIDUAL_PRODUCT_INFORMATION',
+        product
+    };
+};
+
 export const getProducts = () => {
   return dispatch => {
       return fetch(`http://localhost:3001/api/products`)
@@ -20,7 +27,9 @@ export const fetchCurrentProduct = (id) => {
     return dispatch => {
         return fetch(`http://localhost:3001/api/products/${id}`)
         .then(response => response.json())
-        .then(product => dispatch(setProducts(product)))
+        .then(product => {
+            console.log(product)
+            return dispatch(setIndividualProduct(product))})
     }
 }
 
