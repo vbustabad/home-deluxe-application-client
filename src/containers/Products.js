@@ -3,6 +3,7 @@ import ProductCard from '../components/ProductCard';
 import { getProducts, fetchCurrentProduct } from '../actions/products';
 import { addProductToShoppingCart } from '../actions/shoppingCart';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class Products extends Component {
     
