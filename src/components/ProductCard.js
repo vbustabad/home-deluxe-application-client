@@ -6,7 +6,9 @@ const ProductCard = (props) => (
       <h4>Product</h4>
       <p>{props.product.name}</p>
       <p>Price: ${props.product.price}</p>
-      <img className="ProductImage" src={props.product.image_url} alt={props.product.name} /><br /><br />
+      <img className="ProductImage" src={props.product.image_url} alt={props.product.name} />
+      <p>Category: {props.product.category}</p>
+      <br /><br />
           
       <button onClick={() => props.addProductToShoppingCart(props.product)}>Add to Shopping Cart</button>
     </div>
