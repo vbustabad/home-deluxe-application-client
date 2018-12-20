@@ -25,7 +25,7 @@ class Products extends Component {
         <Link to='/shopping-cart'><button>View Shopping Cart</button></Link>
 
         <h2>Products</h2>
-        {this.props.products.map((product, index) => <ProductCard key={index} product={product} addProductToShoppingCart={this.addProductToShoppingCart}/>)}
+        {this.props.products.products.map((product, index) => <ProductCard key={index} product={product} addProductToShoppingCart={this.addProductToShoppingCart} />)}
       </div>
     )
   }
